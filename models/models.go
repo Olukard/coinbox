@@ -6,4 +6,5 @@ type User struct {
 	LastName   	string 
 	Balance 	int 
 	Role 		string
+	Status		string
 }
