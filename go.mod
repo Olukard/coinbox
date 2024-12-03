@@ -1,4 +1,4 @@
-module v0
+module coinbox
 
 go 1.23.2
 

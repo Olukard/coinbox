@@ -1,18 +1,14 @@
 package main
 
 import (
-    "fmt"
-    "net/http"
+	"fmt"
+	"net/http"
 
 	"coinbox/db"
-
 )
 
-
-
-
 func mainHandle(res http.ResponseWriter, req *http.Request) {
-    fmt.Println("Получен запрос")
+	fmt.Println("Получен запрос")
 }
 
 func main() {
@@ -25,13 +21,12 @@ func main() {
 		fmt.Println("База данных найдена.")
 	}
 
-
-    fmt.Println("Запускаем сервер")
+	fmt.Println("Запускаем сервер")
 	http.HandleFunc(`/`, mainHandle)
 
-    err := http.ListenAndServe(":8080", nil)
-    if err != nil {
-        panic(err)
-    }
-    fmt.Println("Завершаем работу")
+	err := http.ListenAndServe(":8080", nil)
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println("Завершаем работу")
 }
